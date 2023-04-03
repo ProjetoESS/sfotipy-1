@@ -1,0 +1,79 @@
+.container{
+    width: 1312px;
+    height: 430px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background: #0D2538;
+}
+
+.textContainer{
+    width: 222px;
+    height: 68.31px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12.32px;
+}
+.smallBox{
+    width: 305px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+}
+
+.imagem{
+    height: 70px;
+    width: 65px;
+    background: #86929B;
+    border-radius: 8px;
+}
+
+.biggerBox{
+    width: 1214px;
+    height: 285px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 270px;
+    row-gap: 45px;
+    padding-left: 64px;
+}
+
+.textOne{
+    height: 34px;
+    width: 222px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    color: #FFFFFF;
+}
+
+.textTwo{
+    height: 22px;
+    width: 137px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #C5C5C5;
+
+}
+.title{
+    height: 34px;
+    width: 371px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    color: #FFFFFF;
+    padding-left: 64px;
+
+}

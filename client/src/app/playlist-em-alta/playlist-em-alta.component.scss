@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    height: 440px;
+    padding-top: 30px;
+    background-color: #0D2538;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    /* padding-left: 137px; */
+}
+.title{
+    height: 34px;
+    width: 217px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    color: #FFFFFF;
+    padding-left: 64px;
+}
+.box{
+    /* width: 1306px; */
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: end;
+    column-gap: 47px;
+    padding-left: 64px;
+
+}
+
+.bigRectangle{
+    width: 290px;
+    height: 290px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+}
+.rectangle{
+    width: 256px;
+    height: 256px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+
+}
+.boxTwo{
+    width: 323px;
+    height: 307px;
+}
+.boxThree{
+    Width:256px;
+    Height:256px;
+}
+.circle{
+    position:relative;
+    left: 230px;
+    bottom: 314px;
+}
+.circleTwo{
+    position: relative;
+    left: 204px;
+    bottom: 261px;
+}
+.circleThree{
+    position: relative;
+    left: 204px;
+    bottom: 261px;
+}
+.circleFour{
+    position: relative;
+    left: 204px;
+    bottom: 261px;
+}
