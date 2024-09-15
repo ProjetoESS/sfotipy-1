@@ -1,0 +1,51 @@
+<body>
+  <div class="tela-login">
+    <div class="titulo-login">
+      <h1>Logar</h1>
+    </div>
+    <div class="input-group">
+      <Form [formGroup]="LoginForm" (ngSubmit)="submit()" #formDir="ngForm">
+        <div class="input-box email">
+          <label for="email" class="nomes-input">E-mail</label>
+          <label for="email">
+            <img src="../../assets/email_branco.svg" class="icones" id="email-i" alt="icone de email">
+          </label>
+          <input id="email" type="email" name="email" placeholder="exemplo@gmail.com" formControlName="email">
+          <div class="validation-error">
+            <div *ngIf="(erro_servidor === false)" class="div-fantastica"><img src="../../assets/erro_input.svg">
+              <p class="incorretos">E-mail ou senha incorretos!</p>
+            </div>
+            <div *ngIf="(submitted) && email.errors?.['required'] && !(erro_servidor === false)" class="div-fantastica">
+              <img src="../../assets/erro_input.svg">
+              <p>Um email precisa ser inserido!</p>
+            </div>
+            <div *ngIf="email.touched && email.errors?.['email']" class="div-fantastica"><img
+                src="../../assets/erro_input.svg">
+              <p>Email inválido!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-box">
+          <label for="password" class="nomes-input">Senha</label>
+          <label for="password">
+            <img src="../../assets/senha_branco.svg" class="icones" id="senha-i" alt="icone de senha">
+          </label>
+          <input id="password" type="password" name="password" placeholder="••••••••" formControlName="senha">
+          <div class="validation-error">
+            <div *ngIf="(submitted) && senha.errors?.['required'] && !(erro_servidor ===false)" class="div-fantastica">
+              <img src="../../assets/erro_input.svg">
+              <p> A senha precisa ser inserida!</p>
+            </div>
+          </div>
+        </div>
+        <div class="entrar-botao"><button type="submit">Entrar</button>
+        </div>
+      </Form>
+    </div>
+    <div class="container-cadastro">
+      <p class="p-cadastro">Ainda não possui uma conta?</p>
+      <a routerLink="/cadastro" class="cadastro">Cadastre-se</a>
+    </div>
+  </div>
+</body>

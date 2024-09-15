@@ -5,12 +5,13 @@ Feature: Gerar link de compartilhamento
 
     Scenario: geração de link de compartilhamento 
         Given eu sou um usuário com login “jsa2” e senha “123”
-        When seleciono a opção de compartilhar playlist que é pública
-        Then um link para aquela playlist personalizada é gerado
-        And posso copiar esse link e compartilhá-lo.       
+        And estou na playlist "minhas favoritas" que é pública com id "1"
+        When seleciono a opção de compartilhar uma "minhas favoritas"
+        Then o link "localhost:3000/playlist/1" é gerado
+        And uma opção para copiá-lo é mostrada.   
 
     Scenario: gerando link de playlist privada
         Given sou um usuário da playlist "minhas favoritas" que é privada
-        And possuo login "jsa2" e senha "123"
-        When tento selecionar a opção de compartilhar playlist
-        Then recebo uma mensagem de erro indicando que a "minhas favoritas" não pode ser compartilhada pois é privada e não sou o dono
+        And possuo login "jsa2" e senha "123" e não sou o dono de "minhas favoritas"
+        When seleciono a opção de compartilhar playlist
+        Then recebo uma mensagem de erro "Não tem permissão para essa ação, você não é dono de minhas favoritas"

@@ -1,28 +1,44 @@
 <head>
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css" />
 </head>
 
-<div class="playlist-card" (click)="openPlaylistOnClick(playlist.link)">
-  <img class="playlist-image" [src]="playlist.image" alt="Playlist cover">
-  <div class="card-body">
-    <h5 class="card-title">{{ playlist.name }}</h5>
-  </div>
-  <div class="overlay">
-    <div class="play-button" [ngClass]="{'playing': playlist.isPlaying}" (click)="startPlayingOnClick($event)">
-      <i class="fa" [ngClass]="{'fa-play': !playlist.isPlaying, 'fa-pause': playlist.isPlaying}"></i>
+<div class="playlist-card" name="playlist-card">
+  <div (click)="openPlaylistOnClick($event, playlist)">
+    <div class="categories-container" name="playlist-category-list">
+      <span *ngFor="let cat of categorias" name="playlist-category" class="badge"
+        id="playlist-cat-{{cat.name.toUpperCase()}}">{{cat.name}}</span>
     </div>
-    <div class="options">
-      <i class="fas fa-ellipsis-v" (click)="executeAction($event)"></i>
+    <img class="playlist-image" [src]="playlist.image" alt="Playlist cover">
+    <div class="card-body">
+      <h5 name="nome" class="card-title">{{ playlist.name }}</h5>
+    </div>
+  </div>
+
+  <div class="overlay" name="overlay">
+    <div class="player-outer">
+      <div class="player-inner">
+        <button *ngIf="isPausable()" (click)="musicPlayerService.pause()"><img src="/assets/pause.svg" alt=""></button>
+        <button *ngIf="!isPausable()" (click)="musicPlayerService.playPlaylist(playlist)"><img src="/assets/play.svg"
+            alt=""></button>
+      </div>
+    </div>
+
+    <div class="options" name="options">
+      <i class="fas fa-ellipsis-v" name="options-button" (click)="executeAction($event)"></i>
       <div class="options-menu">
-        <div class="option" (click)="likePlaylist($event)">
-          <i class="fas fa-heart"></i>
+        <div class="option" name="Like" (click)="likePlaylist($event, playlist)">
+          <i class="fas fa-2xs fa-heart"></i>
         </div>
-        <div class="option" (click)="sharePlaylist($event)">
-          <i class="fas fa-share"></i>
+        <div class="option" name="Share" (click)="sharePlaylist($event, playlist)">
+          <i class="fas fa-2xs fa-share"></i>
         </div>
-        <div class="option" (click)="savePlaylist($event)">
-          <i class="fas fa-plus"></i>
+        <div class="option" name="Save" (click)="savePlaylist($event)">
+          <i class="fas fa-2xs fa-plus"></i>
         </div>
+      </div>
+      <div class="overlay-messages">
+        <div class="share-message" name="share-message" *ngIf="showShareMessage">Link copiado!</div>
+        <div class="liked-message" name="liked-message" *ngIf="showLikedMessage">Playlist curtida!</div>
       </div>
     </div>
   </div>

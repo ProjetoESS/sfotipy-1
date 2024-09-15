@@ -1,4 +1,5 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Playlist } from '../../../../common/playlist';
 
 @Component({
   selector: 'app-playlist-card',
@@ -10,4 +11,5 @@ export class PlaylistCardComponent {
   @Input() image: string | undefined;
   @Input() title: string | undefined;
   @Input() id: string = '2';
+  @Input() playlist!: Playlist;
 }

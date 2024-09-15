@@ -1,13 +1,14 @@
 .playlist-card {
   overflow: hidden;
   margin: 10px;
-  width: 15rem;
-  height: 18rem;
+  width: 265px;
+  height: 265px;
   background-color: #1a171785;
   position: relative;
   border-radius: 12px;
   transition: transform 0.2s ease-in-out;
   cursor: pointer;
+
   &:hover {
     transform: scale(1.02);
   }
@@ -15,26 +16,28 @@
 
 .playlist-image {
   width: 100%;
-  height: 85%;
+  height: 100%;
   object-fit: cover;
 }
 
 .card-body {
+  position: absolute;
   padding: 8px 16px;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  bottom: 0;
+  background-color: rgb(13, 37, 56, 0.8);
+  width: 235px;
   text-align: center;
 }
 
 .card-title {
-  position: absolute;
-  font-weight: bold;
-  font-size: 1.2rem;
-  bottom: 1px;
-  margin-bottom: 0.5rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #FFFFFF;
+  margin: 10px;
 }
 
 .overlay {
@@ -42,10 +45,13 @@
   bottom: 0;
   left: 0;
   right: 0;
-  top: 0;
+  top: 150px;
   opacity: 0;
   transition: .5s ease;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .playlist-card:hover .overlay {
@@ -58,10 +64,10 @@
   left: 0.4rem;
   width: 4rem;
   height: 4rem;
-  border: 0.4rem solid rgb(1, 4, 58);;
+  border: 0.4rem solid #0D2538;
   border-radius: 50%;
-  background-color: rgb(162, 171, 128);
-  color: rgb(1, 4, 58);
+  background-color: #FFE5B4;
+  color: #0D2538;
   font-size: 20px;
   line-height: 50px;
   text-align: center;
@@ -82,14 +88,11 @@
 }
 
 .options {
-  position: absolute;
-  bottom: 2rem;
-  right: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: rgb(1, 4, 58);
+  color: rgb(255, 255, 255);
   font-size: 2rem;
   cursor: pointer;
 }
@@ -97,10 +100,10 @@
 .options-menu {
   display: none;
   position: absolute;
-  bottom: 1.8rem;
-  right: 0rem;
   background-color: #177cbc;
   border-radius: 5px;
+  bottom: 90px;
+  right: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 1;
   opacity: 0;
@@ -114,7 +117,7 @@
 }
 
 .option {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -122,5 +125,89 @@
 }
 
 .option:hover {
-  background-color: rgb(1, 4, 58);
+  background-color: #0D2538;
+}
+
+.categories-container {
+  padding: 15px;
+  position: absolute;
+}
+
+.badge {
+  background-color: #FFE5B4;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-family: 'Iceland';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 21px;
+  text-transform: uppercase;
+
+  color: #000000;
+  margin: 5px;
+}
+
+.overlay-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.overlay-messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-outer {
+  background-color: #0D2538;
+  padding: 6px;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+}
+
+.player-inner {
+  background-color: #FFE5B4;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.share-message,
+.liked-message {
+  background-color: #177cbc;
+  color: white;
+  font-size: 14px;
+  padding: 3px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.liked-message {
+  position: absolute;
+  bottom: 164px;
+  }
+button {
+  background: none;
+  border: none;
+  height: 100%;
+  cursor: pointer;
+}
+
+button img {
+  height: 50%;
 }

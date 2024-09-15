@@ -1,0 +1,14 @@
+
+
+.nav {
+  position: fixed; /* fixar a navegação na posição original */
+  top: 0; /* definir a navegação no topo */
+  left: 0; /* definir a navegação no canto esquerdo */
+  width: 100%; /* definir a largura da navegação como 100% da largura da página */
+  z-index: 1; /* definir a ordem de empilhamento para manter a navegação acima do fundo da página */
+  background-color: #FFE5B4;
+  height: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

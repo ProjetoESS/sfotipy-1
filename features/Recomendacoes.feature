@@ -8,7 +8,7 @@ Feature: Recomendações
         Given that I'm logged with the user "mlv" and password "12345" 
         And I'm on the page "Playlists Recomendadas"
         And a playlist “Pop Music” appears as recommended
-        When I try to enter the playlist page “Pop Music”.
+        When I try to enter the playlist page “Pop Music”
         Then I'm on the playlist page "Pop Music"
     
     Scenario: View recommended playlist options    

@@ -1,0 +1,273 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import '~@fortawesome/fontawesome-free/css/all.css'; */
+
+img {
+  width: 256px;
+  height: 256px;
+  border-radius: 12px;
+}
+
+i {
+  color: white;
+  cursor: pointer;
+}
+
+.campo1 {
+  border-radius: 15px;
+  height: 30vh;
+  background-color: #6E7C88;
+  display: flex;
+  flex-direction: row;
+}
+
+.musicslist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  grid-gap: 35px;
+  margin: 15px 0;
+}
+
+.categories {
+  list-style: none;
+  padding: 0;
+}
+
+.category {
+  display: inline-block;
+  padding: 8px;
+  color: black;
+  background-color: #FFE5B4;
+}
+
+.manage-category {
+  display: inline-block;
+  padding: 8px;
+  color: black;
+  background-color: #FFE5B4;
+  cursor: pointer;
+}
+
+.add_new_category {
+  cursor: pointer;
+  background-color: #FFE5B4;
+  text-decoration: none;
+  color: black;
+}
+
+.share_playlist {
+  color: white;
+}
+
+.margins {
+  margin-top: 150px;
+  margin-bottom: 200px;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 0;
+}
+
+.header {
+  border-radius: 15px;
+  min-height: 30vh;
+  background-color: #6E7C88;
+  display: flex;
+}
+
+.content {
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.content .description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #C5C5C5;
+}
+
+.content i {
+  position: absolute;
+  align-self: center;
+  justify-self: end;
+}
+
+.player {
+  position: absolute;
+  margin-bottom: -50px;
+  align-self: end;
+  right: max(calc((100vw - 1300px))/2, 1em);
+}
+
+.addmusic {
+  position: fixed;
+  bottom: 150px;
+  right: max(calc((100vw - 1200px))/2, 1em);
+}
+
+.addmusicbutton {
+  background-color: #FFE5B4;
+  border-radius: 50%;
+  font-size: 5vh;
+  cursor: pointer;
+  border: #0D2538 6px solid;
+  height: 75px;
+  width: 75px;
+}
+
+.popUp {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 150px;
+  right: max(calc((100vw - 1200px))/2, 1em);
+  background-color: #FFE5B4;
+  border: #0D2538 6px solid;
+  border-radius: 12px;
+  padding: 12px;
+  color: #0D2538;
+  width: 500px;
+}
+
+.opcoes_musica {
+  max-height: 250px;
+  max-width: 500px;
+  overflow-y: auto;
+}
+
+.input_musica {
+  border: #0D2538 1px solid;
+  margin: 5px;
+  border-radius: 16px;
+  background-color: #C5C5C5;
+  width: 100%;
+  color: #fff;
+  padding: 8px;
+}
+
+.badge {
+  background-color: #FFE5B4;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-family: 'Iceland';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 21px;
+  text-transform: uppercase;
+
+  color: #000000;
+  margin-right: 15px;
+}
+
+details>summary {
+  list-style-type: '+';
+  text-align: center;
+  background-color: #FFE5B4;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  color: #0D2538;
+  cursor: pointer;
+  line-height: 32px;
+}
+
+details[open]>summary {
+  list-style-type: '-';
+}
+
+details {
+  display: inline;
+}
+
+details .categories-content {
+  position: absolute;
+}
+
+details span {
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.close-button {
+  border: none;
+  background-color: transparent;
+  color: #0D2538;
+  cursor: pointer;
+}
+
+.music_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.opcoes_musica {
+  width: 100%;
+}
+
+.closePopUp {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.input-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.popUp-text {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.enterButton {
+  background-color: transparent;
+  border: #0D2538 2px solid;
+  border-radius: 8px;
+  padding: 12px;
+  color: #0D2538;
+  cursor: pointer;
+  width: 150px;
+  align-self: flex-end;
+}
+
+.player-outer {
+  background-color: #0D2538;
+  padding: 12px;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+}
+
+.player-inner {
+  background-color: #FFE5B4;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player button {
+  background: none;
+  border: none;
+  height: 100%;
+  cursor: pointer;
+}
+
+.player button img {
+  height: 50%;
+}

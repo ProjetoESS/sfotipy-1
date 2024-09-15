@@ -2,8 +2,13 @@
 body {
     margin: 0;
     background-color: #0D2538;
+    color: #FFF;
+    font-family: 'Inter';
 }
 
 .container {
     margin: 0 max(calc((100vw - 1200px))/2, 1em);
 }
+
+/*$fa-font-path: "../node_modules/font-awesome/fonts";
+@import "../node_modules/font-awesome/scss/font-awesome.scss";*/

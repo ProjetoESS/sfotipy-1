@@ -1,0 +1,70 @@
+<div class="container margins">
+
+
+  <div class="header">
+    <img class="img" src="{{selectedPlaylist.image}}" alt="Capa da playlist" srcset="">
+    <div class="content">
+      <div class="text">
+        <h1 class="playlist_name" name="playlist-name">{{selectedPlaylist.name}}</h1>
+        <span id="playlist_availability" class="description">{{selectedPlaylist.availability}}</span>
+        <br>
+        <span class="description">{{selectedPlaylist.followers.length}} seguidores</span>
+        <br>
+        <br>
+        <span *ngFor="let cat of playlistCategories" class="badge"
+          id="selected-cat-{{cat.name.toUpperCase()}}">{{cat.name}}<button class="close-button"
+            (click)="removeCategory(cat)">x</button></span>
+        <details *ngIf="playlistCategories.length < 2">
+          <summary (click)="getCategories()" id="selector-cat"></summary>
+          <div class="categories-content">
+            <span *ngFor="let cat of getCategories()" id="select-cat-{{cat.name.toUpperCase()}}"
+              (click)="selectCategory(cat)" class="badge">{{cat.name}}
+            </span>
+          </div>
+        </details>
+      </div>
+      <div class="icons">
+        <i *ngIf="selectedPlaylist.availability === 'public'" (click)="showShareLink()" class="fas fa-share">
+          <app-compartilhamento *ngIf="showLink"> </app-compartilhamento>
+        </i>
+      </div>
+    </div>
+    <div class="player">
+      <div class="player-outer">
+        <div class="player-inner">
+          <button *ngIf="isPausable()" (click)="musicPlayerService.pause()"><img src="/assets/pause.svg"
+              alt=""></button>
+          <button *ngIf="!isPausable()" (click)="musicPlayerService.playPlaylist(selectedPlaylist)"><img
+              src="/assets/play.svg" alt=""></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="musicslist">
+    <app-music-card *ngFor="let m of playlistSongs" [id]="m.id" [name]="m.name" [author]="m.author"
+      [music]="m"></app-music-card>
+  </div>
+
+  <div class="addmusic">
+    <button [hidden]="exibirPopup" type="button" class="addmusicbutton" (click)="showPopup()">+</button>
+  </div>
+
+  <div class="popUp" *ngIf="exibirPopup">
+
+    <div class="music_input" *ngIf="exibirPopup">
+      <div class="input-header">
+        <input type="search" class="input_musica" placeholder="Música" (keyup)="filtrarMusicas($event)">
+        <button type="button" class="closePopUp" (click)="hidePopup()">X</button>
+      </div>
+      <div class="opcoes_musica">
+        <p *ngFor="let musica of musicasFiltradas" (click)="adicionarMusica(musica)">{{musica}}</p>
+      </div>
+    </div>
+    <h4 class="popUp-text" *ngIf="musicas_add.getValue().length > 0">Músicas Selecionadas</h4>
+    <div class="musicas_adicionadas">
+      <li *ngFor="let musica of musicas_add.getValue()">{{ musica.name }}</li>
+    </div>
+    <button *ngIf="musicas_add.getValue().length > 0" type="button" class="enterButton"
+      (click)="updateMusicas()">Adicionar</button>
+  </div>

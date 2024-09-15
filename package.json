@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@angular/material": "^15.2.6",
+    "clipboard": "^2.0.11",
+    "connect-multiparty": "^2.2.0",
+    "cors": "^2.8.5"
+  }
+}

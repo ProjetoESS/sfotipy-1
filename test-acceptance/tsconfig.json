@@ -8,8 +8,13 @@
         "removeComments": false,
         "noImplicitAny": false,
         "outDir": "typeScript",
-        "typeRoots": [ "./node_modules/@types" ],
-        "types": ["node","cucumber"]
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
+        "types": [
+            "node",
+            "cucumber"
+        ]
     },
     "exclude": [
         "node_modules",

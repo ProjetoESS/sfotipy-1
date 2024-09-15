@@ -1,0 +1,349 @@
+/* RESET.CSS*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*RESET.CSS*/
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    backdrop-filter: blur(2px);
+
+}
+
+.titulo-login {
+    font-family: 'Iceland', sans-serif;
+    font-size: 72px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.titulo-login h1 {
+    color: #0D2538;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.25);
+}
+
+.tela-login {
+    width: 640px;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    background: #86929B;
+    border-radius: 32px;
+    align-items: center;
+}
+
+.input-group {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.input-box {
+    width: 500px;
+    display: block;
+}
+
+.input-box input {
+    width: 85%;
+    height: 60px;
+    border: solid;
+    border-radius: 16px;
+    border-color: #000000;
+    background: rgba(13, 37, 56, 1);
+    margin-bottom: 1rem;
+    margin-top: 5px;
+
+    font-family: 'Itim', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+    vertical-align: center;
+    padding-left: 15%;
+}
+
+/*
+TENTANDO FAZER O ICONE MUDAR
+.input-box:hover #senha-i {
+    background: url(../../assets/senha_branco.svg) no-repeat center center;
+    background-size: 3rem;
+    transition: 0.5;
+}
+
+.input-box:hover #email-i,
+.input-box:focus #email-i {
+    background: url(../../assets/email_branco.svg) no-repeat center center;
+    background-size: 3rem;
+}
+*/
+
+.input-box input:focus,
+.input-box input:hover {
+    outline: none;
+    border: solid;
+    border-color: rgba(255, 255, 255, 1);
+}
+
+input::placeholder {
+    font-family: 'Itim', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+.input-box .nomes-input {
+    font-family: 'Iceland', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #000000;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.25);
+    flex-wrap: wrap;
+}
+
+.icones {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    margin-top: 1rem;
+    display: flex;
+    margin-left: 1rem;
+    color: rgba(255, 255, 255, 0.6)
+}
+
+
+/*.esqueceu-senha {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #E1E1E1;
+    display: inline-block;
+    margin-left: 63.5%;
+}
+
+.esqueceu-senha:hover {
+    font-size: 20px;
+    margin-left: 60%;
+    padding-bottom: 1%;
+}*/
+
+.entrar-botao button {
+    background: #1A7FC1;
+    border-radius: 16px;
+    width: 100%;
+    height: 4rem;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.entrar-botao button:hover {
+    background: rgba(26, 127, 193, 0.7)
+}
+
+.entrar-botao button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: #E1E1E1;
+    text-decoration: none;
+}
+
+.container-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-cadastro p {
+    color: rgba(13, 37, 56, 1);
+    font-family: 'Inter', sans-serif;
+}
+
+.p-cadastro {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.cadastro {
+    font-family: 'Iceland', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #E1E1E1;
+    text-decoration: none;
+    margin-top: 2px;
+}
+
+.cadastro:hover {
+    text-decoration: underline;
+}
+
+.validation-error .div-fantastica {
+    display: flex;
+    align-items: center;
+
+    margin-top: -2%;
+    margin-bottom: 0.3rem;
+}
+
+.validation-error .div-fantastica img {
+    width: 1.8rem;
+    height: 1.8rem;
+    padding-right: 0.5rem;
+    padding-left: 0.2rem;
+}
+
+.validation-error .div-fantastica p {
+    font-family: 'Aldrich', sans-serif;
+    font-style: normal;
+    color: rgba(255, 55, 55, 1);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.menssage-confirmacao {
+    border-color: red;
+    left: 50%;
+    right: 50%;
+    font-size: 50px;
+}
+
+.incorretos {
+    font-size: 28px;
+}
