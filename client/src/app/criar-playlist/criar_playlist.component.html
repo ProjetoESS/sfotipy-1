@@ -1,0 +1,33 @@
+<form class="form">
+  <div class="campo1">
+    <p class="novaPlaylist">Nova Playlist</p>
+    <label class="imageInput">
+      <input type="file" accept="image" class="picture_input" (change)="ngOnInit()" value="">
+      <span class="picture_image">+</span>
+    </label>
+  </div>
+
+  <div class="campo2">
+    <div class="nomeDaPlaylist_div">
+      <label for="playlist_input_name" class="playlist_name">Nome da Playlist</label>
+      <input type="text" class="playlist_input_name" value="">
+    </div>
+
+    <div class="addMusica">
+      <input type="search" class="input_musica" placeholder="Música">
+      <i class="fas fa-search" aria-hidden="true"></i>
+    </div>
+
+    <div class="publicavel">
+      <label class="button_toggle">
+        <input class="publicar_input" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      <p class="publicar">Publicar</p>
+      <button class="submit" (click)="criarPlaylist($event)">CRIAR</button>
+
+    </div>
+  </div>
+</form>
+
+

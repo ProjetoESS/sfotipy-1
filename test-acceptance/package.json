@@ -9,19 +9,23 @@
   },
   "author": "Daniel Bastos",
   "devDependencies": {
+    "@types/clipboard": "^2.0.7",
     "@types/cucumber": "0.0.38",
     "@types/node": "^8.0.31",
     "@types/selenium-webdriver": "^3.0.0",
     "chai": "^4.0.2",
     "chai-as-promised": "^7.0.0",
+    "chai-asserttype-extra": "^2.0.13",
     "cucumber": "^2.3.0",
     "mkdirp": "^0.5.1",
     "protractor-cucumber-framework": "^3.1.1",
     "typescript": "^2.9.2"
   },
   "dependencies": {
+    "clipboardy": "^3.0.0",
     "cucumber-html-reporter": "^4.0.5",
     "protractor": "^5.1.2",
     "ts-node": "^3.1.0"
   }
+  
 }

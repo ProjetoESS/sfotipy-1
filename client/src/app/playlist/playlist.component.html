@@ -1,0 +1,39 @@
+<div class="container margins">
+
+
+  <div class="header">
+    <img class="img" src="{{selectedPlaylist.image}}" alt="Capa da playlist" srcset="">
+    <div class="content">
+      <div class="text">
+        <h1 class="playlist_name" name="playlist-name">{{selectedPlaylist.name}}</h1>
+        <span id="playlist_availability" class="description">{{selectedPlaylist.availability}}</span>
+        <br>
+        <span class="description">{{selectedPlaylist.followers.length}} seguidores</span>
+        <br>
+        <br>
+        <span *ngFor="let cat of playlistCategories" class="badge"
+          id="selected-cat-{{cat.name.toUpperCase()}}">{{cat.name}}<button class="close-button"
+            (click)="removeCategory(cat)">x</button></span>
+        <details *ngIf="playlistCategories.length < 2">
+          <summary (click)="getCategories()" id="selector-cat"></summary>
+          <div class="categories-content">
+            <span *ngFor="let cat of getCategories()" id="select-cat-{{cat.name.toUpperCase()}}"
+              (click)="selectCategory(cat)" class="badge">{{cat.name}}
+            </span>
+          </div>
+        </details>
+      </div>
+      <div class="icons">
+        <i *ngIf="selectedPlaylist.availability === 'public'" (click)="showShareLink()" class="fas fa-share">
+          <app-compartilhamento *ngIf="showLink"> </app-compartilhamento>
+        </i>
+      </div>
+    </div>
+    <app-player class="player"></app-player>
+  </div>
+
+  <div class="musicslist">
+    <app-music-card *ngFor="let m of playlistSongs" [id]="m.id" [name]="m.name" [author]="m.author"
+      [music]="m"></app-music-card>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div id="manage-categories">
+    <a class="back" href="http://localhost:4200/playlist/{{playlistId}}">
+        <span>&#8592;</span>
+    </a>
+    <h3> Adicionar Categorias </h3>
+
+    <div id="selected-categories">
+        <div *ngFor="let category of playlistCategories" class="category" (click)="deleteCategory(category)" id="selected-{{category.name}}">
+            {{ category.name }}
+        </div>
+    </div>
+
+    <div id="categories">
+        <div *ngFor="let category of allCategories" class="category" (click)="addNewCategory(category)" id="category-{{category.name}}">
+            {{ category.name }}
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="title" *ngFor="let music of mostAccessedMusics">Músicas em Alta na Semana</div>
+    <div class="biggerBox">
+        <div class="smallBox">
+            <div class="imagem">{{music.image}}</div>
+            <div class="textContainer">
+                <div class="textOne">{{music.name}}</div>
+                <div class="textTwo">{{music.author}}</div>
+            </div>
+        </div>
+    </div>
+
+</div>

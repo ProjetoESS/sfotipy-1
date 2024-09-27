@@ -1,0 +1,75 @@
+.profilepage{
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    background-color: #8b97a0;
+    color: #ffffff;
+    border-radius: 12px;
+}
+
+.profile-header{
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-pic{
+    margin: 30px;
+
+    height: 200px;
+    width: 200px;
+
+    border-radius: 50%;
+
+    background-color: #0D2538;
+}
+
+.saudation{
+    font-weight: bold;
+    font-size: 40px;
+
+    margin-top: 50px;
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+
+    height: 330px;
+    padding-left: 40px;
+
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.prf-btn, .prf-btnv, .prf-btng, .prf-btns{
+    display: block;
+
+    background: none;
+    border: none;
+    margin-top: 10px;
+
+    color: #ffffff;
+    font-size: 20px;
+
+    cursor: pointer;
+    transition: filter 0.25s;
+}
+
+.prf-btnv{
+    color: #ff2e2e;
+}
+
+.prf-btng{
+    color: #21d30a;
+}
+
+.prf-btns{
+    margin-top: 50px;
+}
+
+.prf-btn:hover, .prf-btnv:hover, .prf-btng:hover, .prf-btns:hover{
+    filter: brightness(85%)
+}

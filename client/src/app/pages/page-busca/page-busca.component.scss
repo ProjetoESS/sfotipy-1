@@ -1,5 +1,6 @@
 .bound {
     margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .row {
@@ -17,14 +18,107 @@
     right: max(calc((100vw - 1200px))/2, 1em);
 }
 
-.filter {}
+.tag {
+    border: 3px solid #0D2538;
+    border-radius: 25px;
+    padding: 0.25em 0.5em;
+    margin: 15px;
+    margin-left: 0;
+    cursor: pointer;
+    background-color: transparent;
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 21px;
+    text-transform: uppercase;
+
+    color: #0D2538;
+}
+
+.tag.active {
+    background-color: #0D2538;
+    color: #FFF;
+}
 
 input[name="search"] {
     background: #D9D9D9;
     border-radius: 25px;
     border: none !important;
-    height: 40px;
-    padding: 8px;
+    height: 48px;
+    padding: 8px 16px;
 
-    width: 80%;
+    width: 100%;
+}
+
+.playlistslista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.musicaslista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    grid-gap: 35px;
+    margin: 15px 0;
+}
+
+.see-more-music {
+    text-align: end;
+    width: 100%;
+    cursor: pointer;
+}
+
+.badge {
+    background-color: #FFE5B4;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 21px;
+    text-transform: uppercase;
+
+    color: #000000;
+    margin-right: 15px;
+}
+
+details>summary {
+    list-style-type: '+';
+    text-align: center;
+    background-color: #FFE5B4;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    color: #0D2538;
+    cursor: pointer;
+    line-height: 32px;
+}
+
+details[open]>summary {
+    list-style-type: '-';
+}
+
+details {
+    display: inline;
+}
+
+details .content {
+    position: absolute;
+}
+
+details span {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.close-button {
+    border: none;
+    background-color: transparent;
+    color: #0D2538;
+    cursor: pointer;
 }

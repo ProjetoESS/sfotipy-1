@@ -1,13 +1,15 @@
-.card-container {
+.playlist-card-container {
     width: 256px;
     height: 256px;
     border-radius: 12px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    background-size: cover;
+    background-position: center center;
 }
 
-.card-container:hover .card-details {
+.playlist-card-container:hover .card-details {
     display: flex;
 }
 

@@ -1,29 +1,39 @@
 <head>
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css" />
 </head>
 
-<div class="playlist-card" (click)="openPlaylistOnClick(playlist.link)">
+<div class="playlist-card" name="playlist-card" (click)="openPlaylistOnClick($event, playlist)">
+  <div class="categories-container" name="playlist-category-list">
+    <span *ngFor="let cat of categorias" name="playlist-category" class="badge"
+      id="playlist-cat-{{cat.name.toUpperCase()}}">{{cat.name}}</span>
+  </div>
   <img class="playlist-image" [src]="playlist.image" alt="Playlist cover">
   <div class="card-body">
-    <h5 class="card-title">{{ playlist.name }}</h5>
+    <h5 name="nome" class="card-title">{{ playlist.name }}</h5>
   </div>
-  <div class="overlay">
-    <div class="play-button" [ngClass]="{'playing': playlist.isPlaying}" (click)="startPlayingOnClick($event)">
+  <div class="overlay" name="overlay">
+
+
+    <div class="play-button" name="play-button" [ngClass]="{'playing': playlist.isPlaying}"
+      (click)="startPlayingOnClick($event)">
       <i class="fa" [ngClass]="{'fa-play': !playlist.isPlaying, 'fa-pause': playlist.isPlaying}"></i>
     </div>
+
     <div class="options">
-      <i class="fas fa-ellipsis-v" (click)="executeAction($event)"></i>
+      <i class="fas fa-ellipsis-v" name="options-button" (click)="executeAction($event)"></i>
       <div class="options-menu">
-        <div class="option" (click)="likePlaylist($event)">
+        <div class="option" name="Like" (click)="likePlaylist($event)">
           <i class="fas fa-heart"></i>
         </div>
-        <div class="option" (click)="sharePlaylist($event)">
+        <div class="option" name="Share" (click)="sharePlaylist($event, playlist)">
           <i class="fas fa-share"></i>
         </div>
-        <div class="option" (click)="savePlaylist($event)">
+        <div class="option" name="Save" (click)="savePlaylist($event)">
           <i class="fas fa-plus"></i>
         </div>
       </div>
     </div>
+
+    <div class="share-message" name="share-message" *ngIf="showShareMessage">Link copiado</div>
   </div>
 </div>

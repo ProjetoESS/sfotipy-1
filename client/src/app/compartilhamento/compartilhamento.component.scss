@@ -1,10 +1,12 @@
 #share-container {
     margin:0 auto;
+    margin-left: -30%;
     width: 30%;
     height: 90px;
     background-color: #BCBCBC;
     border-radius: 7px;
     padding: 20px;
+    position: fixed;
 }
 
 h4 {
@@ -29,7 +31,7 @@ h4 {
 }
 
 #playlist-link {
-    color:white;
+    color:black;
 }
 
 #copy-button {

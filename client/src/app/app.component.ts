@@ -6,11 +6,5 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	title = 'client';
-
-	isLogged : boolean = true;
-
-	getLogOut($event : boolean) : void{
-		this.isLogged = $event;
-	}
+	title = 'Sfotipy';
 }

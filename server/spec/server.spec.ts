@@ -4,45 +4,26 @@ import { closeServer } from '../server';
 
 const baseUrl = "http://localhost:3000";
 const playlistURl = `${baseUrl}/playlist`
+const musicUrl = `${baseUrl}/musics`
 
 describe("O servidor", () => {
-  var server:any;
+  var server: any;
 
-  beforeAll(() => {server = require('../server')});
+  beforeAll(() => { server = require('../server') });
 
-  afterAll(() => {server.closeServer()});
+  afterAll(() => { server.closeServer() });
 
-  /*it("inicialmente retorna uma lista de alunos vazia", () => {
-    return request.get(carsUrl).then(body => expect(body).toBe("[]")).catch(e => expect(e).toEqual(null));
+  it("inicialmente retorna uma lista de músicas com músicas", () => {
+    return request.get(musicUrl).then(body => expect(body).not.toBe("[]")).catch(e => expect(e).toEqual(null));
   })
 
-  it("só cadastra com preco positivo", () => {
-    const body = {
-      name: "Lancer",
-      brand: "Mitsubishi",
-      price: -100,
-      color: "BLACK"
-    }
-    const options:any = {method: 'POST', uri: (carsUrl), body, json: true};
-    return request(options).catch(({ statusCode }) => {
-      expect(statusCode).toBe(400);
-    })
-  });
-
-  it("cadastra carro com sucesso", () => {
-    const body = {
-      name: "Lancer",
-      brand: "Mitsubishi",
-      price: 90,
-      color: "BLACK"
-    }
-    const options :any = {method: 'POST', uri: (carsUrl), body, json: true};
-    const newCar = { id: 0, ...body };
+  it("cadastra música com sucesso", () => {
+    const body = { 'name': "Someone New", 'author': "Hozier", 'image': "https://upload.wikimedia.org/wikipedia/pt/6/61/Coldplay_Hymn_for_the_Weekend.jpg", 'link': "", 'duration': 500, 'category': 6 }
+    const options: any = { method: 'POST', uri: (musicUrl), body, json: true };
+    const newCar = { id: 25, ...body };
     return request(options).then(body => {
-         expect(body).toEqual(newCar);
-     });
-  });*/
-
-
+      expect(body).toEqual(newCar);
+    });
+  });
 
 })
